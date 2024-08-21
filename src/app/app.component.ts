@@ -16,5 +16,6 @@ export class AppComponent {
   navigate(page: string) {
     this.viewContainerRef().length !== 0 && this.viewContainerRef().clear();
     this.viewContainerRef().createEmbeddedView(this.templateRef(), { $implicit: page });
+    // this.injector.get(ApplicationRef).tick();
   }
 }
