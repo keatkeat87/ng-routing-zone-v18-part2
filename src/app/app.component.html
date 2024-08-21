@@ -1,0 +1,11 @@
+<ng-template #template let-page>
+  @for (color of ['lightyellow', 'lightblue', 'lightgreen']; track color) {
+    <section [style.--bg-color]="color" >{{ page }} section {{ $index + 1 }}</section>
+  }
+</ng-template>
+<ng-container #container></ng-container>
+
+<div class="navigation">
+  <button (click)="navigate('Home')" >navigate to home</button>
+  <button (click)="navigate('About')" >navigate to about</button>
+</div>
